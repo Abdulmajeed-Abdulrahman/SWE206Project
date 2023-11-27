@@ -15,9 +15,10 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     Pane loginPane= new Pane();
+    //tt
     TextArea idTextArea =new TextArea();
     TextArea passwordTextArea=new TextArea();
-    Image imageLoginBackground= new Image("C:\\Users\\aar14\\IdeaProjects\\SWE206Project\\src\\Pic\\KFUPM Research Center.png");
+    Image imageLoginBackground= new Image("C:\\Users\\Mohammed\\IdeaProjects\\SWE206Project\\src\\Pic\\KFUPM Research Center.png");
     ImageView imageViewLoginBackground= new ImageView(imageLoginBackground);
 
     Button loginButton=new Button("Login");
