@@ -101,7 +101,7 @@ public class HelloApplication extends Application {
         loginPane.getChildren().addAll(imageViewLoginBackground, idTextArea,passwordTextArea,loginButton);
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        //Admin projects page///////////////////////////////////////////////////////////////////////////////////////////
         projectPane.setPrefHeight(630);
         projectPane.setPrefWidth(1120);
 
