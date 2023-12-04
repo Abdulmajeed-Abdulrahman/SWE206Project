@@ -6,33 +6,43 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-public class machine {
-    String name;
-    String suggestedUsage;
-    Date schedule;
+public class Machine {
+    private String name;
+    private String suggestedUsage;
 
-    public machine(String name) {
+    public Machine(String name) {
         this.name = name;
     }
 
-    public machine(String name, String suggestedUsage) {
+    public Machine(String name, String suggestedUsage) {
         this.name = name;
         this.suggestedUsage = suggestedUsage;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSuggestedUsage() {
+        return suggestedUsage;
+    }
+
     @Override
     public String toString() {
-        return "Name: " + name + '\'' +
-                ", Suggested usage: " + suggestedUsage + "\n";
+        return "Name: " + name + ", Suggested usage: " + suggestedUsage + "\n";
     }
 
     public static void main(String[] args) {
-        ArrayList<machine> machineList = new ArrayList<>();
+        ArrayList<Machine> machineList = new ArrayList<>();
         File file = new File("C:\\Users\\Mohammed\\IdeaProjects\\demo\\src\\main\\java\\com\\example\\demo\\machine.txt");
         try {
             Scanner read = new Scanner(file);
-            while (read.hasNext()) {
-                machineList.add(new machine(read.nextLine(), read.nextLine()));
+            while (read.hasNextLine()) {
+                String name = read.nextLine();
+                String suggestedUsage = read.nextLine();
+                machineList.add(new Machine(name, suggestedUsage));
             }
+            read.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
