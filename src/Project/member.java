@@ -39,7 +39,7 @@ public class Member {
 
     public static void main(String[] args) {
         ArrayList<Member> memberList = new ArrayList<>();
-        File file = new File("C:\\Users\\Mohammed\\IdeaProjects\\demo\\src\\main\\java\\com\\example\\demo\\members.txt");
+        File file = new File("C:/Users/addal/IdeaProjects/SWE206Project/src/Project/members.txt");
         try {
             Scanner read = new Scanner(file);
             while (read.hasNext()) {

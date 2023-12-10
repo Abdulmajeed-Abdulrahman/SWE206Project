@@ -27,7 +27,7 @@ public class Admin {
         String user = input.next();
         int password = Integer.parseInt(input.next());
 
-        File file = new File("C:\\Users\\Mohammed\\IdeaProjects\\SWE 206\\src\\Project\\login.txt");
+        File file = new File("C:/Users/addal/IdeaProjects/SWE206Project/src/Project/login.txt");
         try {
             Scanner read = new Scanner(file);
             while (read.hasNext()) {

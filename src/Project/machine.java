@@ -34,7 +34,7 @@ public class Machine {
 
     public static void main(String[] args) {
         ArrayList<Machine> machineList = new ArrayList<>();
-        File file = new File("C:\\Users\\Mohammed\\IdeaProjects\\demo\\src\\main\\java\\com\\example\\demo\\machine.txt");
+        File file = new File("C:/Users/addal/IdeaProjects/SWE206Project/src/Project/machine.txt");
         try {
             Scanner read = new Scanner(file);
             while (read.hasNextLine()) {
