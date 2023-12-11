@@ -51,24 +51,23 @@ public class HelloApplication extends Application {
                 String[] machines = read.nextLine().split(",");
                 String[] team = read.nextLine().split(",");
                 projectList.add(new Project(name, team, machines));
+
             }
             read.close();
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
 
-        // reading status file
+        // Declaring and initializing status
         Status status = new Status();
-        File statusFile = new File("C:\\Users\\osama\\KFUPM\\TERM 231 (Current)\\SWE 206\\SWE-206 Project\\SWE206Project\\src\\main\\java\\com\\example\\swe206project\\Status.txt");
-        try {
-            Scanner read = new Scanner(statusFile);
-            status.setMostActiveMember(read.nextLine());
-            status.setMostUtilizedMachine(read.nextLine());
-        } catch (FileNotFoundException e) {
-            System.out.println(e);
-        }
 
-        // updating project with most machines in status
+        // finding most active member
+        status.setMostActiveMember(status.findMostFrequentMember(projectList));
+
+        // find ing most utilized machine
+        status.setMostUtilizedMachine(status.findMostFrequentMachine(projectList));
+
+        // finding project with most machines in status
         maxMachines = 0;
         for(Project project:projectList){
             if(project.getNumberOfMachines() > maxMachines){
