@@ -1,0 +1,12 @@
+Project1
+Centrifuge,Separation of Substances,Spectrophotometer,DNA Amplification,Mass Spectrometer
+Osama,Ahemd,Ali
+Project2
+Centrifuge,Spectrophotometer
+Mohammed,Rayan,Saud,Hazem
+Project3
+Mass Spectrometer,DNA Amplification
+Mohsen,Thamer,Abdullah,Kareem,Sami
+Project4
+Separation of Substances,DNA Amplification,Mass Spectrometer
+Hasan,Mohsen,Hassan

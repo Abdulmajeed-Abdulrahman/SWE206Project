@@ -1,85 +1,38 @@
 package com.example.swe206project;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Arrays;
 
 public class Project {
-    private String name;
-    private Member[] team;
-    private Machine[] machines;
+    String name;
+    String[] team;
 
-    public Project(String name, Member[] team, Machine[] machines) {
+    String[] machines;
+
+    public Project(String name) {
         this.name = name;
-        this.team = getTeam();
-        this.machines = getMachines();
-
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public Member[] getTeam() {
-        return team;
-    }
-
-    public void setTeam(Member[] team) {
+    public Project(String name, String[] team, String[] machines){
+        this.name = name;
         this.team = team;
-    }
-
-    public Machine[] getMachines() {
-        return machines;
-    }
-
-    public void setMachines(Machine[] machines) {
         this.machines = machines;
+
+    }
+    public String getName(){
+        return this.name;
     }
 
-    public void addMember(Member member) {
-        // Add member to the team array
-        // You can implement this method according to your requirements
-    }
-
-    public void addMachine(Machine machine) {
-        // Add machine to the machines array
-        // You can implement this method according to your requirements
+    public int getNumberOfMachines(){
+        return this.machines.length;
     }
 
     @Override
     public String toString() {
-        return "Name: " + name + "\n" +
-                "Team: " + teamToString() + "\n" +
-                "Machines: " + machinesToString() + "\n";
+        return "Name: " + name + '\'' +
+                ", Team: " + Arrays.toString(this.team) + "\n" +
+                ", Machines: " + Arrays.toString(this.machines);
     }
 
-    private String teamToString() {
-        if (team == null || team.length == 0) {
-            return "No team members";
-        }
-
-        StringBuilder teamString = new StringBuilder();
-        for (Member member : team) {
-            teamString.append(member.getName()).append(", ");
-        }
-        // Remove the trailing comma and space
-        teamString.delete(teamString.length() - 2, teamString.length());
-        return teamString.toString();
+    public void add(Member member) {
     }
-
-    private String machinesToString() {
-        if (machines == null || machines.length == 0) {
-            return "No machines";
-        }
-
-        StringBuilder machinesString = new StringBuilder();
-        for (Machine machine : machines) {
-            machinesString.append(machine.getName()).append(", ");
-        }
-        // Remove the trailing comma and space
-        machinesString.delete(machinesString.length() - 2, machinesString.length());
-        return machinesString.toString();
-    }
-
-
 }
